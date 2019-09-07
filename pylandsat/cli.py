@@ -156,7 +156,7 @@ def search(begin, end, geojson, latlon, address, path, row, clouds, sensors,
     if sensors:
         sensors = [s.strip() for s in sensors.split(',')]
     if tiers:
-        tiers = [t.trip() for t in tiers.split(',')]
+        tiers = [t.strip() for t in tiers.split(',')]
 
     catalog = Catalog()
     scenes = catalog.search(begin, end, path, row, geom, clouds, sensors,
