@@ -41,6 +41,9 @@ class Product:
             basename = self.product_id + '_' + label
         return self.baseurl + basename
 
+    def download_gsutil(self, out_dir):
+        print(BASE_URL)
+
     def download(self, out_dir, progressbar=True, files=None):
         """Download a Landsat product.
 
